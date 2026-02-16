@@ -1,71 +1,131 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-    background: #0a3d62;
-    color: white;
-    padding: 15px 40px;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+}
+
+/* NAVBAR */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-nav ul {
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-nav a {
+.nav-links a {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* HERO */
 .hero {
-    height: 90vh;
-    background: url('https://via.placeholder.com/1400x800') center/cover;
-    color: white;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 200px;
+    color: white;
 }
 
-.hero h2 {
-    font-size: 45px;
+.hero-content {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 10px;
 }
 
-.btn {
-    background: orange;
-    padding: 12px 20px;
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.btn-primary {
+    background: #f39c12;
+    padding: 12px 25px;
     color: white;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-footer {
+.btn-primary:hover {
+    background: #e67e22;
+}
+
+/* SECTION */
+.section {
+    padding: 100px 60px;
     text-align: center;
-    padding: 20px;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
     background: #0a3d62;
     color: white;
-}
-
-.section {
-    padding: 60px;
     text-align: center;
-}
-
-.card {
-    background: #f4f4f4;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    border-radius: 8px;
 }
 
+/* RESPONSIVE */
 @media(max-width:768px){
-    nav ul {
+    .navbar {
         flex-direction: column;
+    }
+    .hero h1 {
+        font-size: 30px;
     }
 }
