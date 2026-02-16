@@ -1,86 +1,71 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
 }
 
-.navbar {
+nav {
+    background: #0a3d62;
+    color: white;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0a3d62;
-    padding: 15px 40px;
-    color: white;
 }
 
-.nav-links {
+nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.nav-links a {
+nav a {
     color: white;
     text-decoration: none;
 }
 
 .hero {
     height: 90vh;
-    background: url('https://via.placeholder.com/1200x800') center/cover;
+    background: url('https://via.placeholder.com/1400x800') center/cover;
     color: white;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 200px;
 }
 
 .hero h2 {
-    font-size: 48px;
+    font-size: 45px;
 }
 
-.hero button {
+.btn {
+    background: orange;
     padding: 12px 20px;
-    background: #f39c12;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a3d62;
+    color: white;
 }
 
 .section {
-    padding: 60px 40px;
+    padding: 60px;
     text-align: center;
 }
 
 .card {
     background: #f4f4f4;
-    margin: 20px auto;
     padding: 20px;
+    margin: 20px auto;
     max-width: 600px;
     border-radius: 8px;
 }
 
-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-button {
-    background: #0a3d62;
-    color: white;
-    padding: 10px;
-    border: none;
-}
-
-/* Responsive */
 @media(max-width:768px){
-    .nav-links {
+    nav ul {
         flex-direction: column;
-    }
-    .hero h2 {
-        font-size: 28px;
     }
 }
